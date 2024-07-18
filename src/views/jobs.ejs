@@ -1,0 +1,51 @@
+<!-- <div id="jobcards">
+        <% avjobs.forEach(job => { %>
+            <div class="card" id="jcard">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #8a2be2;"><%= job.name %></h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= job.category %></h6>
+                    <span><h6 class="card-subtitle mb-2 text-body-secondary"><%= job.job %></h6></span>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= job.location %></h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= "$" + job.salary + "lpa" %></h6>
+                    <br>
+
+                    <% for (let i = 0; i < job.skills.length; i++) { %>
+                        <span id="skillsbox">
+                            <span class="card-text skills"><%= job.skills[i] %></span>
+                        </span>
+                    <% } %>
+
+                    <br>
+                    <br>
+                    <a href="/portal/<%= job.id %>" class="card-link"><button type="button" class="btn btn-success" style="background-color: #8a2be2;">View details</button></a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+  -->
+<div id="jobcards">
+        <% avjobs.forEach(job => { %>
+            <div class="card" id="jcard">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #8a2be2;"><%= job.name %></h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= job.category %></h6>
+                    <span><h6 class="card-subtitle mb-2 text-body-secondary"><%= job.job %></h6></span>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= job.location %></h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= "$" + job.salary + "lpa" %></h6>
+                    <br>
+                    <span id="skillsbox">
+                    <% for (let i = 0; i < job.skills.length; i++) { %>
+                        
+                            <span class="card-text" id="skills"><%= job.skills[i] %></span>
+                        
+                    <% } %>
+                  </span>
+                    <br>
+                    <br>
+                    <a href="/portal/<%= job.id %>" class="card-link"><button type="button" class="btn btn-success" style="background-color: #8a2be2;">View details</button></a>
+                </div>
+            </div>
+        <% }) %>
+    </div>

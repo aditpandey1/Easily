@@ -1,0 +1,116 @@
+<!-- <div id="jobform">
+    <center><h1>Post a new Job</h1></center>
+    <form action="/addjob" class="p-5" method="post">
+        <select class="select" id="category" name="category" >
+            <option value="" selected disabled>Select Category</option>
+            <option value="tech">Tech</option>
+            <option value="non-tech">Non-Tech</option>
+        </select><br>
+        <select class="select" id="job" name="job">
+            <option value="" selected disabled>Select Job Role</option>
+            <option value="HR">HR</option>
+            <option value="SDE">SDE (Software Development Engineer)</option>
+            <option value="DevOps">DevOps Engineer</option>
+            <option value="MERNDeveloper">MERN Developer</option>
+            <option value="MEANDeveloper">MEAN Developer</option>
+            <option value="JavaDeveloper">Java Developer</option>
+            <option value="FrontendDeveloper">Frontend Developer</option>
+            <option value="BackendDeveloper">Backend Developer</option>
+            <option value="FullstackDeveloper">Fullstack Developer</option>
+        </select><br>
+        <label for="location">Job Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter job location" required>
+        <br>
+
+        
+        <label for="name">Company Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter company name" required>
+        <br>
+
+   
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" placeholder="Enter salary" required>
+        <br>
+
+        <label for="positions">Total Positions:</label>
+        <input type="number" id="positions" name="positions" placeholder="Enter total positions" required>
+        <br>
+        
+        <select class="select" id="skills" name="skills" multiple size="10">
+            <option selected="" disabled="">select skills required</option>
+            <option value="React">React</option>
+            <option value="Node.js">Node.js</option>
+            <option value="Angular">Angular</option>
+            <option value="Java">Java</option>
+            <option value="MongoDB">MongoDB</option>
+            <option value="SQL">SQL</option>
+            <option value="Express">Express</option>
+            <option value="SpringBoot">Spring Boot</option>
+            <option value="C++">C++</option>
+            <option value="DataStructures & Algo">Data Structures & algo</option>
+        
+        </select>
+        <br>
+        <label for="date">Apply by:</label>
+    <input type="date" id="date" name="date" required><br>
+    <button type="submit" class="btn btn-primary mt-2">Apply</button>
+    </form>
+</div> -->
+
+<div id="jobform" style="max-width: 70%; margin: 50px auto; padding: 20px; border-radius: 8px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+    <center><h1 style="color: #8a2be2;">Post a New Job</h1></center>
+
+    <form action="/addjob" class="p-5" method="post">
+
+        <select class="select" id="category" name="category" style="margin-bottom: 15px; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <option value="" selected disabled>Select Category</option>
+            <option value="tech">Tech</option>
+            <option value="non-tech">Non-Tech</option>
+        </select><br>
+
+        <select class="select" id="job" name="job" style="margin-bottom: 15px; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <option value="" selected disabled>Select Job Role</option>
+            <option value="HR">HR</option>
+            <option value="SDE">SDE (Software Development Engineer)</option>
+            <option value="DevOps">DevOps Engineer</option>
+            <option value="MERNDeveloper">MERN Developer</option>
+            <option value="MEANDeveloper">MEAN Developer</option>
+            <option value="JavaDeveloper">Java Developer</option>
+            <option value="FrontendDeveloper">Frontend Developer</option>
+            <option value="BackendDeveloper">Backend Developer</option>
+            <option value="FullstackDeveloper">Fullstack Developer</option>
+        </select><br>
+
+        <label for="location" style="margin-bottom: 15px; color: #8a2be2;">Job Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter job location" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+        <label for="name" style="margin-bottom: 15px; color: #8a2be2;">Company Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter company name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+        <label for="salary" style="margin-bottom: 15px; color: #8a2be2;">Salary:</label>
+        <input type="text" id="salary" name="salary" placeholder="Enter salary" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+        <label for="positions" style="margin-bottom: 15px; color: #8a2be2;">Total Positions:</label>
+        <input type="number" id="positions" name="positions" placeholder="Enter total positions" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+        <br>
+        <select class="select"  name="skills" multiple size="10" style="margin-bottom: 15px; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; height: 100%;">
+            <option selected="" disabled="">select skills required</option>
+            <option value="React">React</option>
+            <option value="Node.js">Node.js</option>
+            <option value="Angular">Angular</option>
+            <option value="Java">Java</option>
+            <option value="MongoDB">MongoDB</option>
+            <option value="SQL">SQL</option>
+            <option value="Express">Express</option>
+            <option value="SpringBoot">Spring Boot</option>
+            <option value="C++">C++</option>
+            <option value="DataStructures & Algo">Data Structures & algo</option>
+        </select><br>
+
+        <label for="date" style="margin-bottom: 15px; color: #8a2be2;">Apply by:</label>
+        <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"><br>
+
+        <button type="submit" class="btn btn-primary btn-purple mt-2" style="background-color: #8a2be2; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+    </form>
+</div>

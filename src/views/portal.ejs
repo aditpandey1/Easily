@@ -1,0 +1,90 @@
+
+<div class="container">
+  <center>
+      <h1 class="purple-text"><%= jobdata[0].job %> opportunity in <%= jobdata[0].location %> at <%= jobdata[0].name %></h1>
+  </center>
+  <div>
+      <h3><%= jobdata[0].name %></h3>
+      <h5><%= jobdata[0].category %></h5>
+      <h5><%= jobdata[0].job %></h2>
+  </div>
+  <div>
+      <h5><%= jobdata[0].location %></h5>
+      <h5><%= jobdata[0].salary %>lpa</h5>
+      <h5><%= jobdata[0].date %></h5>
+      <h5>Number of openings: <%= jobdata[0].positions %></h5>
+      <h5>Applicants: <%= jobdata[0].applicants %></h5>
+      <% for (let i = 0; i < jobdata[0].skills.length; i++) { %>
+          <span class="card-text" id="skills"><%= jobdata[0].skills[i] %></span>
+      <% } %>
+  </div><br>
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-purple">
+      Apply
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5 purple-text" id="exampleModalLabel">Register</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form action="/jobs/<%= jobdata[0].id %>" method="post" class="p-5" enctype="multipart/form-data">
+                      <!-- Your form fields here -->
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter Your Name"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                          name="email"
+                          type="email"
+                          class="form-control"
+                          id="number"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter Your Mail"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="number">Phonenumber</label>
+                        <input
+                          type="tel"
+                          name="number"
+                          class="form-control"
+                          id="number"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter Your Number"
+                        />
+                      </div>
+                      <div class="form-group">
+                          <label for="file">Resume</label>
+                          <input
+                            type="file"
+                            name="file"
+                            class="form-control"
+                            id="file"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter Your Password"
+                          />
+                        </div>
+                  
+              </div>
+            
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary btn-purple">Register</button>
+              </div>
+            </form>
+          </div>
+
+      </div>
+  </div>
+</div>

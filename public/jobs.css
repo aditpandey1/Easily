@@ -1,0 +1,64 @@
+/* #skills{
+    border: 1px solid blue;
+    color: blue;
+    padding: 5px;
+}
+#skills:hover{
+    background-color: lightblue;
+}
+
+#jobcards {
+    margin-left: 4vw;
+    display: flex !important;
+    flex-direction: row !important;
+    height: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 90vw;
+    flex-wrap: wrap;
+}
+#jcard{
+    width: 20vw;
+    margin: 10px;
+} */
+
+#jobcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#jcard {
+    width: 20vw;
+    margin: 10px;
+}
+
+#skills {
+    display: inline-block;
+    border: 1px solid #8a2be2;
+    color: #8a2be2;
+    padding: 5px;
+    height: 40px;
+    margin-right: 5px; /* Add margin to create space between skills */
+    margin-bottom: 10px !important;
+}
+
+#skills:hover {
+    background-color: #6a1a9e;
+}
+
+.btn-success {
+    background-color: #8a2be2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    background-color: #6a1a9e;
+}
+#skillsbox{
+    display: inline-block;
+    height: 30px;
+}

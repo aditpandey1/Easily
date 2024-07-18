@@ -1,0 +1,55 @@
+<style>
+    /* div {
+        background-color: #f5f5f5;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    } */
+
+    h1 {
+        color: #8a2be2;
+        text-align: center;
+        position: relative;
+        animation: shake 0.5s ease-in-out infinite;
+    }
+
+    img {
+        margin: 30px;
+        width: 200px;
+        height: 200px;
+        margin-right: 10px;
+    }
+
+    @keyframes shake {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        25%,
+        75% {
+            transform: translateX(-5px);
+        }
+
+        50% {
+            transform: translateX(5px);
+        }
+    }
+</style>
+
+
+<div>
+    <h1>
+        <img src="/images/new.png" alt="User Not Found Image"> <br>
+        <%if(path=="/login"){%>
+            User not Found
+        <%}%>
+        <%if(path=="/addjob"){%>
+            Only recruiters can add a job
+        <%}%>
+    </h1>
+</div>
+
